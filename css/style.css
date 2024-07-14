@@ -20,6 +20,9 @@
 body {
   min-height: 100vh;
   min-height: 100svh;
+  display: grid;
+  /* grid-template-columns: max-content; */
+  grid-auto-rows: auto;
   /* background: url("/images/pattern-hills.svg") no-repeat bottom,
     url("/images/bg-stars.svg") no-repeat top; */
   /* object-fit: fill; */
@@ -28,39 +31,41 @@ main {
   height: 100%;
 }
 
-.left-circle {
+.left-circle,
+.bottom-left-circle {
   content: "";
   position: absolute;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: var(--Very-dark-mostly-black-blue);
   top: 0;
   bottom: 0;
   left: -0.25rem;
   right: 0;
-  z-index: -1;
+  z-index: 88;
   margin-block: auto;
+  overflow: visible;
 }
+
 .right-circle {
   content: "";
   position: absolute;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   background-color: var(--Very-dark-mostly-black-blue);
   top: 0;
   bottom: 0;
-  /* left: 0; */
   right: -0.25rem;
   margin-block: auto;
-  z-index: -1;
+  z-index: 1;
 }
 .timer-container {
   /* width: max-content; */
 }
 .display-timer {
-  /* position: relative; */
+  position: relative;
   /* height: max-content;
   width: max-content; */
   width: 10rem;
@@ -146,6 +151,7 @@ main {
   /* z-index: 1; */
   /* transform: rotateX(180deg) perspective(700px); */
   backface-visibility: visible;
+  /* backface-visibility: hidden; */
   transform: rotateX(-360deg);
   transform-origin: bottom;
   transition: transform 0.8s;
@@ -160,33 +166,3 @@ main {
   transform-style: preserve-3d;
   /* z-index: 3; */
 }
-
-/* .day-number:hover + .top-half {
-  cursor: pointer;
-
-  transform: rotateX(360deg);
-  transform-origin: bottom;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.day-number:hover ~ .left-circle,
-.day-number:hover ~ .right-circle {
-  transform: rotateX(360deg) perspective(700px);
-  transform-origin: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-} */
-/* .day-number:hover ~ .bottom-half {
-  transform: rotateX(-180deg) perspective(700px);
-  transform-origin: top;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-} */
-
-/* .day-number:hover {
-  transform: rotateX(360deg) perspective(700px);
-  transform-origin: bottom bottom;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-} */
