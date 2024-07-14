@@ -46,14 +46,18 @@ main > img {
   align-items: center;
   grid-row: 1;
   grid-column: 1 / -1;
+  /* Mobile */
+  gap: 3.5rem;
 }
 .content > h1 {
   color: var(--White);
   /* Mobile */
   font-size: 1.2rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.35rem;
   word-spacing: 0.1rem;
   text-align: center;
+  width: 25ch;
+  line-height: 1.2;
 }
 img {
   width: 100%;
@@ -115,10 +119,10 @@ footer > img {
 }
 .display-timer {
   position: relative;
-  --width: 4.3rem;
+  --width: 4.35rem;
   /* Mobile */
   width: var(--width);
-  height: 4.1rem;
+  height: 4.15rem;
   /* Desktop */
   /* width: 10rem; */
   /* height: 10rem; */
