@@ -61,7 +61,7 @@ main {
   margin-block: auto;
   z-index: 1;
 }
-.timer-container {
+.timer {
   width: max-content;
   text-align: center;
 }
@@ -169,6 +169,6 @@ main {
   /* z-index: 3; */
 }
 
-.timer {
+.timer-container {
   display: flex;
 }
