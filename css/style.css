@@ -62,7 +62,8 @@ main {
   z-index: 1;
 }
 .timer-container {
-  /* width: max-content; */
+  width: max-content;
+  text-align: center;
 }
 .display-timer {
   position: relative;
@@ -76,8 +77,9 @@ main {
   /* background-color: transparent; */
   border-radius: 0.5rem;
   overflow: hidden;
+  border: 1px solid hsl(from var(--Very-dark-mostly-black-blue) h s l / 0.5);
 }
-.day {
+.time-frame {
   color: var(--Grayish-blue);
 }
 .day-number {
@@ -165,4 +167,8 @@ main {
   transition: transform 0.8s;
   transform-style: preserve-3d;
   /* z-index: 3; */
+}
+
+.timer {
+  display: flex;
 }
