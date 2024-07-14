@@ -22,12 +22,14 @@ body {
   min-height: 100svh;
   display: grid;
   background-color: var(--Very-dark-blue);
-  /* grid-template-columns: 1fr max-content; */
+  /* grid-template-columns: 1fr 200px; */
+  grid-template-rows: 1fr 12rem;
   /* grid-auto-rows: max-content; */
   /* grid-template-columns: max-content; */
   /* place-content: safe center; */
-  /* background: url("/images/pattern-hills.svg") no-repeat bottom,
-    url("/images/bg-stars.svg") no-repeat top; */
+  /* background: url("/images/pattern-hills.svg") no-repeat bottom right 0.4rem /
+      cover,
+    url("/images/bg-stars.svg") no-repeat top var(--Very-dark-blue); */
   /* object-fit: fill; */
 }
 main {
@@ -35,6 +37,7 @@ main {
   /* height: 100%; */
   place-items: center;
   grid-row: 1;
+  background: url("/images/bg-stars.svg") no-repeat top var(--Very-dark-blue);
 }
 main > img {
   grid-row: 1;
@@ -68,6 +71,8 @@ footer {
   display: grid;
   place-items: center;
   grid-row: 2;
+  background: url("/images/pattern-hills.svg") repeat-x bottom right -4rem / cover;
+  /* background-size: cover; */
 }
 footer > img {
   grid-row: 1;
@@ -77,6 +82,8 @@ footer > img {
   display: flex;
   grid-row: 1;
   grid-column: 1 / -1;
+  /* mobile */
+  gap: 2rem;
 }
 
 .left-circle {
@@ -246,4 +253,15 @@ footer > img {
 .timer-container {
   display: flex;
   gap: 1rem;
+}
+
+@media (min-width: 30rem) {
+  body {
+    /* background: url("/images/pattern-hills.svg") no-repeat bottom / contain
+      url("/images/bg-stars.svg") no-repeat top var(--Very-dark-blue); */
+  }
+
+  footer {
+    background: url("/images/pattern-hills.svg") repeat-x bottom / contain;
+  }
 }
