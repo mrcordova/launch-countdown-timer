@@ -110,12 +110,12 @@ footer > img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* text-align: center; */
+  gap: 0.8rem;
   border: 0;
 }
 .display-timer {
   position: relative;
-  --width: 4.4rem;
+  --width: 4.3rem;
   /* Mobile */
   width: var(--width);
   height: 4.1rem;
@@ -132,6 +132,9 @@ footer > img {
 }
 .time-frame {
   color: var(--Grayish-blue);
+  /* Mobile */
+  font-size: 0.47rem;
+  letter-spacing: 0.15rem;
 }
 .day-number {
   /* Mobile */
