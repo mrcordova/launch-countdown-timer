@@ -1,0 +1,46 @@
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  /* background: url("/images/pattern-hills.svg") no-repeat bottom,
+    url("/images/bg-stars.svg") no-repeat top; */
+  /* object-fit: fill; */
+}
+main {
+  height: 100%;
+}
+
+.timer-container {
+  /* width: max-content; */
+}
+.display-timer {
+  position: relative;
+  height: max-content;
+  width: max-content;
+  border: 0;
+}
+.day-number {
+  font-size: 3rem;
+  background-color: hsl(235, 16%, 14%);
+  width: max-content;
+  padding: 1rem;
+  border: 0;
+  color: red;
+}
+.top-half {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid blue;
+  /* box-shadow: inset 0px 0px 0px gray; */
+}
+.bottom-half {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
