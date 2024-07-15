@@ -55,11 +55,18 @@ main > img {
 .content > h1 {
   color: var(--White);
   /* Mobile */
-  font-size: 1.2rem;
-  letter-spacing: 0.35rem;
+  /* font-size: 1.2rem; */
+  /* letter-spacing: 0.35rem; */
+  /* word-spacing: 0.1rem; */
+  /* text-align: center; */
+  /* width: 25ch; */
+  /* line-height: 1.2; */
+  /* Desktop */
+  font-size: 1.45rem;
+  letter-spacing: 0.4rem;
   word-spacing: 0.1rem;
   text-align: center;
-  width: 25ch;
+  width: 50ch;
   line-height: 1.2;
 }
 img {
@@ -126,13 +133,12 @@ footer > img {
 }
 .display-timer {
   position: relative;
-  --width: 4.35rem;
   /* Mobile */
-  width: var(--width);
-  height: 4.15rem;
+  /* width: 4.35rem; */
+  /* height: 4.15rem; */
   /* Desktop */
-  /* width: 10rem; */
-  /* height: 10rem; */
+  width: 9.4rem;
+  height: 8.7rem;
   border: 0;
   background-color: var(--Dark-desaturated-blue);
   /* z-index: -3; */
@@ -252,7 +258,10 @@ footer > img {
 
 .timer-container {
   display: flex;
-  gap: 1rem;
+  /* Mobile */
+  /* gap: 1rem; */
+  /* Desktop */
+  gap: 2rem;
 }
 
 @media (min-width: 30rem) {
