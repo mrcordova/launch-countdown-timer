@@ -50,7 +50,9 @@ main > img {
   grid-row: 1;
   grid-column: 1 / -1;
   /* Mobile */
-  gap: 3.5rem;
+  /* gap: 3.5rem; */
+  /* Desktop */
+  gap: 6.5rem;
 }
 .content > h1 {
   color: var(--White);
@@ -155,9 +157,9 @@ footer > img {
 }
 .day-number {
   /* Mobile */
-  font-size: 2.2rem;
+  /* font-size: 2.2rem; */
   /* Desktop */
-  /* font-size: 4rem; */
+  font-size: 5rem;
   width: max-content;
   max-height: max-content;
   height: max-content;
@@ -193,15 +195,15 @@ footer > img {
   margin-inline: auto;
   overflow: hidden;
   /* Mobile */
-  top: -1.7rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* Desktop */
-  /* top: -3rem; */
+  /* top: -1.7rem; */
   /* bottom: 0; */
   /* left: 0; */
   /* right: 0; */
+  /* Desktop */
+  top: -3.8rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .top-half {
   /* content: "";
