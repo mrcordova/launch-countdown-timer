@@ -22,19 +22,10 @@ body {
   min-height: 100svh;
   display: grid;
   background-color: var(--Very-dark-blue);
-  /* grid-template-columns: 1fr 200px; */
   grid-template-rows: 1fr 12rem;
-  /* grid-auto-rows: max-content; */
-  /* grid-template-columns: max-content; */
-  /* place-content: safe center; */
-  /* background: url("/images/pattern-hills.svg") no-repeat bottom right 0.4rem /
-      cover,
-    url("/images/bg-stars.svg") no-repeat top var(--Very-dark-blue); */
-  /* object-fit: fill; */
 }
 main {
   display: grid;
-  /* height: 100%; */
   place-items: center;
   grid-row: 1;
   background: url("/images/bg-stars.svg") no-repeat top var(--Very-dark-blue);
@@ -51,25 +42,11 @@ main > img {
   grid-column: 1 / -1;
 
   gap: clamp(3.5rem, 2.4437rem + 4.507vi, 6.5rem);
-  /* Mobile */
-  /* gap: 3.5rem; */
-  /* Desktop */
-  /* gap: 6.5rem; */
 }
 .content > h1 {
   color: var(--White);
   font-size: clamp(1.2rem, 1.112rem + 0.3756vi, 1.45rem);
   letter-spacing: clamp(1.2rem, 1.112rem + 0.3756vi, 1.45rem);
-  /* Mobile */
-  /* font-size: 1.2rem; */
-  /* letter-spacing: 0.35rem; */
-  /* word-spacing: 0.1rem; */
-  /* text-align: center; */
-  /* width: 25ch; */
-  /* line-height: 1.2; */
-  /* Desktop */
-  /* font-size: 1.45rem; */
-  /* letter-spacing: 0.4rem; */
   word-spacing: 0.1rem;
   text-align: center;
 
@@ -137,56 +114,32 @@ footer > img {
   border: 0;
 
   gap: clamp(0.8rem, 0.5535rem + 1.0516vi, 1.5rem);
-  /* Mobile */
-  /* gap: 0.8rem; */
-  /* Desktop */
-  /* gap: 1.5rem; */
 }
 .display-timer {
   position: relative;
   width: clamp(4.35rem, 2.5718rem + 7.5869vi, 9.4rem);
   height: clamp(4.15rem, 2.5479rem + 6.8357vi, 8.7rem);
-  /* Mobile */
-  /* width: 4.35rem; */
-  /* height: 4.15rem; */
-  /* Desktop */
-  /* width: 9.4rem; */
-  /* height: 8.7rem; */
+
   border: 0;
   background-color: var(--Dark-desaturated-blue);
-  /* z-index: -3; */
-  /* background-color: transparent; */
+
   border-radius: 0.2rem;
   overflow: hidden;
-  /* border: 3px solid var(--Very-dark-blue); */
 }
 .time-frame {
   color: var(--Grayish-blue);
   font-size: clamp(0.47rem, 0.2834rem + 0.7962vi, 1rem);
   letter-spacing: clamp(0.15rem, 0.0972rem + 0.2254vi, 0.3rem);
-  /* Mobile */
-  /* font-size: 0.47rem; */
-  /* letter-spacing: 0.15rem; */
-  /* Desktop */
-  /* font-size: 1rem; */
-  /* letter-spacing: 0.3rem; */
 }
 .day-number {
   font-size: clamp(2.2rem, 1.2141rem + 4.2066vi, 5rem);
-  /* Mobile */
-  /* font-size: 2.2rem; */
-  /* Desktop */
-  /* font-size: 5rem; */
+
   width: max-content;
   max-height: max-content;
   height: max-content;
   margin-block: 0;
-  /* padding: 1rem; */
   border: 0;
   color: var(--Soft-red);
-  /* background-color: var(--Dark-desaturated-blue); */
-  /* position: absolute; */
-  /* z-index: 0; */
 }
 
 .top-number {
@@ -195,42 +148,12 @@ footer > img {
   margin-inline: auto;
 
   top: clamp(0.5rem, 2.5282rem + -2.2535vi, 2rem);
-  /* Desktop */
-  /* top: 0.5rem; */
+
   bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
   z-index: 0;
-}
-/* .back-half {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--Dark-desaturated-blue);
-  border: 1px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
-  z-index: 0;
-  overflow: hidden;
-} */
-.back-number {
-  width: 100%;
-  height: 100%;
-
-  content: "";
-  position: absolute;
-  margin-inline: auto;
-  overflow: hidden;
-  bottom: clamp(-3.8rem, -0.9606rem + -3.1549vi, -1.7rem);
-  /* z-index: 0; */
-  top: 0;
-  left: 0;
-  right: 0;
-
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  background-color: var(--Dark-desaturated-blue);
-  background-color: red;
 }
 
 .main-seconds {
@@ -243,7 +166,6 @@ footer > img {
   z-index: 0;
   margin-inline: auto;
   overflow: hidden;
-  /* z-index: -1; */
 }
 
 .bottom-number {
@@ -265,7 +187,7 @@ footer > img {
   top: 0;
   left: 0;
   overflow: hidden;
-  /* overflow: vi; */
+
   z-index: 0;
 }
 .top-half {
@@ -277,6 +199,7 @@ footer > img {
   border: 1px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
   z-index: 0;
   overflow: hidden;
+  /* backface-visibility: visible; */
 }
 .bottom-half {
   position: relative;
@@ -292,11 +215,10 @@ footer > img {
 .top-half-anim {
   cursor: pointer;
   border: 3px solid hsl(from var(--Dark-desaturated-blue) h s l / 0.5);
-  /* z-index: 1; */
-  /* transform: rotateX(180deg) perspective(700px); */
+
+  background-color: var(--Dark-desaturated-blue);
   backface-visibility: hidden;
-  /* backface-visibility: hidden; */
-  transform: rotateX(-360deg) perspective(1000px);
+  transform: rotateX(-180deg) perspective(1000px);
   transform-origin: bottom;
   transition: transform 1s;
   transform-style: preserve-3d;
@@ -310,7 +232,6 @@ footer > img {
   transform-origin: top;
   transition: transform 1.5s;
   transform-style: preserve-3d;
-  /* z-index: 3; */
 }
 
 .timer-container {
