@@ -196,28 +196,25 @@ footer > img {
 
   top: clamp(0.5rem, 2.5282rem + -2.2535vi, 2rem);
   /* Desktop */
-  top: 0.5rem;
+  /* top: 0.5rem; */
   bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
   z-index: 0;
-  /* Mobile */
-  /* top: 2rem; */
-  /* bottom: 0; */
-  /* left: 0; */
-  /* right: 0; */
 }
 
 .main-seconds {
+  content: "";
   position: absolute;
-  top: 0;
+  top: clamp(0.5rem, 2.5282rem + -2.2535vi, 2rem);
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 0;
-  margin: auto;
+  margin-inline: auto;
   overflow: hidden;
+  /* z-index: -1; */
 }
 
 .bottom-number {
@@ -231,12 +228,25 @@ footer > img {
   left: 0;
   right: 0;
 }
+.main-half {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  /* overflow: vi; */
+  z-index: 0;
+}
 .top-half {
   position: relative;
   width: 100%;
   height: 50%;
-  border: 1px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
 
+  background-color: var(--Dark-desaturated-blue);
+  border: 1px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
+  z-index: 0;
   overflow: hidden;
 }
 .bottom-half {
@@ -257,7 +267,7 @@ footer > img {
   /* transform: rotateX(180deg) perspective(700px); */
   backface-visibility: visible;
   /* backface-visibility: hidden; */
-  transform: rotateX(-360deg) perspective(1000px);
+  transform: rotateX(-180deg) perspective(1000px);
   transform-origin: bottom;
   transition: transform 1s;
   transform-style: preserve-3d;

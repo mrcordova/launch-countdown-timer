@@ -31,6 +31,11 @@ window.addEventListener("load", () => {
       hour.textContent = `${hoursNum}`;
     }
     for (const minute of minutes) {
+      if (parseInt(minute.textContent) != mins) {
+        if (minute.classList.contains("top-number")) {
+          minute.parentElement.classList.toggle("top-half-anim");
+        }
+      }
       minute.textContent = `${mins}`;
     }
     for (const second of seconds) {
