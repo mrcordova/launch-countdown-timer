@@ -203,6 +203,35 @@ footer > img {
   overflow: hidden;
   z-index: 0;
 }
+/* .back-half {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--Dark-desaturated-blue);
+  border: 1px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
+  z-index: 0;
+  overflow: hidden;
+} */
+.back-number {
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  position: absolute;
+  margin-inline: auto;
+  overflow: hidden;
+  bottom: clamp(-3.8rem, -0.9606rem + -3.1549vi, -1.7rem);
+  /* z-index: 0; */
+  top: 0;
+  left: 0;
+  right: 0;
+
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background-color: var(--Dark-desaturated-blue);
+  background-color: red;
+}
 
 .main-seconds {
   content: "";
@@ -262,12 +291,12 @@ footer > img {
 
 .top-half-anim {
   cursor: pointer;
-  border: 3px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
+  border: 3px solid hsl(from var(--Dark-desaturated-blue) h s l / 0.5);
   /* z-index: 1; */
   /* transform: rotateX(180deg) perspective(700px); */
-  backface-visibility: visible;
+  backface-visibility: hidden;
   /* backface-visibility: hidden; */
-  transform: rotateX(-180deg) perspective(1000px);
+  transform: rotateX(-360deg) perspective(1000px);
   transform-origin: bottom;
   transition: transform 1s;
   transform-style: preserve-3d;

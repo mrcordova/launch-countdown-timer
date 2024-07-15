@@ -42,7 +42,10 @@ window.addEventListener("load", () => {
       second.textContent = `${secondsNum + 1}`;
       if (second.classList.contains("top-number")) {
         second.parentElement.classList.toggle("top-half-anim");
-      } else if (second.classList.contains("main-seconds")) {
+      } else if (
+        second.classList.contains("main-seconds") ||
+        second.classList.contains("back-number")
+      ) {
         second.textContent = `${secondsNum}`;
         // second.parentElement.classList.toggle("bottom-half-anim");
       }
