@@ -287,6 +287,11 @@ footer > img {
   /* gap: 2rem; */
 }
 
+.icons > svg > path:hover {
+  cursor: pointer;
+  fill: var(--Soft-red);
+}
+
 @media (min-width: 44rem) {
   .content > h1 {
     width: 50ch;
