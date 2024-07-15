@@ -28,7 +28,7 @@ main {
   display: grid;
   place-items: center;
   grid-row: 1;
-  background: url("/images/bg-stars.svg") no-repeat top var(--Very-dark-blue);
+  background: url("../images/bg-stars.svg") no-repeat top var(--Very-dark-blue);
 }
 main > img {
   grid-row: 1;
@@ -61,7 +61,7 @@ footer {
   display: grid;
   place-items: center;
   grid-row: 2;
-  background: url("/images/pattern-hills.svg") repeat-x bottom right -4rem / cover;
+  background: url("../images/pattern-hills.svg") repeat-x bottom right -4rem / cover;
   /* background-size: cover; */
 }
 footer > img {
@@ -264,12 +264,7 @@ footer > img {
 }
 
 @media (min-width: 30rem) {
-  body {
-    /* background: url("/images/pattern-hills.svg") no-repeat bottom / contain
-      url("/images/bg-stars.svg") no-repeat top var(--Very-dark-blue); */
-  }
-
   footer {
-    background: url("/images/pattern-hills.svg") repeat-x bottom / contain;
+    background: url("../images/pattern-hills.svg") repeat-x bottom / contain;
   }
 }
