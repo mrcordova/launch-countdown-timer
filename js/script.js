@@ -25,15 +25,27 @@ window.addEventListener("load", () => {
     const secondsNum = Math.floor((distance % (1000 * 60)) / 1000);
 
     for (const day of days) {
+      // day.textContent = `${daysNum}`;
+      if (parseInt(day.textContent) != daysNum) {
+        if (day.classList.contains("top-number")) {
+          day.parentElement.classList.toggle("top-half-time-anim");
+        }
+      }
       day.textContent = `${daysNum}`;
     }
     for (const hour of hours) {
+      // hour.textContent = `${hoursNum}`;
+      if (parseInt(hour.textContent) != hoursNum) {
+        if (hour.classList.contains("top-number")) {
+          hour.parentElement.classList.toggle("top-half-time-anim");
+        }
+      }
       hour.textContent = `${hoursNum}`;
     }
     for (const minute of minutes) {
       if (parseInt(minute.textContent) != mins) {
         if (minute.classList.contains("top-number")) {
-          minute.parentElement.classList.toggle("top-half-anim");
+          minute.parentElement.classList.toggle("top-half-time-anim");
         }
       }
       minute.textContent = `${mins}`;
@@ -42,12 +54,8 @@ window.addEventListener("load", () => {
       second.textContent = `${secondsNum + 1}`;
       if (second.classList.contains("top-number")) {
         second.parentElement.classList.toggle("top-half-anim");
-      } else if (
-        second.classList.contains("main-seconds") ||
-        second.classList.contains("back-number")
-      ) {
+      } else if (second.classList.contains("main")) {
         second.textContent = `${secondsNum}`;
-        // second.parentElement.classList.toggle("bottom-half-anim");
       }
     }
   }, 500);
