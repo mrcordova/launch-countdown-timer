@@ -34,7 +34,13 @@ window.addEventListener("load", () => {
       minute.textContent = `${mins}`;
     }
     for (const second of seconds) {
-      second.textContent = `${secondsNum}`;
+      second.textContent = `${secondsNum + 1}`;
+      if (second.classList.contains("top-number")) {
+        second.parentElement.classList.toggle("top-half-anim");
+      } else if (second.classList.contains("main-seconds")) {
+        second.textContent = `${secondsNum}`;
+        // second.parentElement.classList.toggle("bottom-half-anim");
+      }
     }
-  }, 1000);
+  }, 500);
 });

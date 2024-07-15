@@ -201,11 +201,23 @@ footer > img {
   left: 0;
   right: 0;
   overflow: hidden;
+  z-index: 0;
   /* Mobile */
   /* top: 2rem; */
   /* bottom: 0; */
   /* left: 0; */
   /* right: 0; */
+}
+
+.main-seconds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  margin: auto;
+  overflow: hidden;
 }
 
 .bottom-number {
@@ -214,66 +226,50 @@ footer > img {
   margin-inline: auto;
   overflow: hidden;
   top: clamp(-3.8rem, -0.9606rem + -3.1549vi, -1.7rem);
-  /* Mobile */
-  /* top: -1.7rem; */
-  /* bottom: 0; */
-  /* left: 0; */
-  /* right: 0; */
-  /* Desktop */
-  /* top: -3.8rem; */
+  z-index: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
 .top-half {
-  /* content: "";
-  position: absolute;
-  top: 0;
-  left: 0; */
   position: relative;
   width: 100%;
   height: 50%;
-  /* border: 1px solid hsl(from var(--Very-dark-blue) h s l / 0.5); */
-  /* background-color: var(--Dark-desaturated-blue); */
-  /* background-color: red; */
-  z-index: 1;
+  border: 1px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
+
   overflow: hidden;
 }
 .bottom-half {
-  /* content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0; */
   position: relative;
   width: 100%;
   height: 50%;
-  /* z-index: -1; */
+
   border-top: 1px solid hsl(from var(--Very-dark-mostly-black-blue) h s l / 0.5);
-  /* background-color: blue; */
-  /* background-color: var(--Dark-desaturated-blue); */
-  /* background-color: red; */
-  z-index: 0;
+
   box-shadow: inset 0 7px 9px -14px var(--White);
   overflow: hidden;
 }
 
-.top-half:hover {
+.top-half-anim {
   cursor: pointer;
+  border: 3px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
   /* z-index: 1; */
   /* transform: rotateX(180deg) perspective(700px); */
   backface-visibility: visible;
   /* backface-visibility: hidden; */
-  transform: rotateX(-360deg);
+  transform: rotateX(-360deg) perspective(1000px);
   transform-origin: bottom;
-  transition: transform 0.8s;
+  transition: transform 1s;
   transform-style: preserve-3d;
 }
 
-.bottom-half:hover {
-  backface-visibility: visible;
+.bottom-half-anim {
+  border: 3px solid hsl(from var(--Very-dark-blue) h s l / 0.5);
+  border-top: 1px solid hsl(from var(--Very-dark-mostly-black-blue) h s l / 0.5);
+  backface-visibility: hidde;
   transform: rotateX(-360deg);
   transform-origin: top;
-  transition: transform 0.8s;
+  transition: transform 1.5s;
   transform-style: preserve-3d;
   /* z-index: 3; */
 }
@@ -281,10 +277,6 @@ footer > img {
 .timer-container {
   display: flex;
   gap: clamp(1rem, 0.6479rem + 1.5023vi, 2rem);
-  /* Mobile */
-  /* gap: 1rem; */
-  /* Desktop */
-  /* gap: 2rem; */
 }
 
 .icons > svg > path:hover {
